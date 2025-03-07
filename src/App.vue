@@ -1,21 +1,22 @@
 <template>
-      <h1>web page</h1>
-      <div class="alert alert-danger" role="alert">
-        A simple danger alert—check it out!
-         </div>
-      <router-view></router-view>
-     
+  <div>
+    <HeaderSection />
+    <router-view></router-view>
+  </div>
 </template>
+  
+
+ 
 
 <script>
-
-
+import HeaderSection from './components/sections/HeaderSection.vue'
 export default {
-  name: 'App',
-  
-}
+  name: "App",
+  components : {
+    HeaderSection
+  }
+};
 </script>
 
 <style>
-
 </style>
