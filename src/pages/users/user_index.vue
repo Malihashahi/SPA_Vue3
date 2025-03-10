@@ -1,14 +1,10 @@
-<template>
-  <div class="container mt-5">
-    <div class="row g-3">
-      <div v-if="loading" class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
+\<template>
+  <div v-if="loading" class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
 
-      <div v-else class="col-md-4" v-for="user in users" :key="user.id">
-        <UserCardViwe :user="user" />
-      </div>
-    </div>
+  <div v-else class="col-md-4" v-for="user in users" :key="user.id">
+    <UserCardViwe :user="user" />
   </div>
 </template>
 
@@ -16,6 +12,7 @@
 import axios from "axios";
 import { ref } from "vue";
 import UserCardViwe from "@/components/users/CardView.vue";
+import { useRoute } from "vue-router";
 
 export default {
   components: {
@@ -24,6 +21,7 @@ export default {
   setup() {
     const users = ref([]);
     const loading = ref(true);
+    const route = useRoute();
 
     function getUsers() {
       axios
@@ -39,7 +37,7 @@ export default {
 
     getUsers();
 
-    return { users };
+    return { users, loading, route };
   },
 };
 </script>
