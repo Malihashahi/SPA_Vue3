@@ -1,22 +1,21 @@
 <template>
   <div>
-    <HeaderSection />
+    <Header />
     <router-view></router-view>
+ 
   </div>
 </template>
-  
-
- 
 
 <script>
-import HeaderSection from './components/sections/HeaderSection.vue'
+import Header from './components/sections/HeaderSection.vue'
 export default {
   name: "App",
   components : {
-    HeaderSection
+    Header
   }
 };
 </script>
 
 <style>
 </style>
+.
