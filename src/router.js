@@ -7,6 +7,7 @@ import ShowUser from './pages/users/ShowUser.vue';
 
 import TemplatePost from './pages/posts/PostTemplate.vue';
 import IndexPost from './pages/posts/PostIndex.vue';
+import ShowPost from './pages/posts/ShowPost.vue';
 
 const routes = [
     { path: '/', name: 'home', component: Home },
@@ -19,7 +20,7 @@ const routes = [
     {
         path: '/posts', name: 'postTemplate', component: TemplatePost, children: [
             { path: '', name: 'posts', component: IndexPost },
-            // { path: ':id', name: 'postId', component: ShowPost }
+            { path: ':id', name: 'postId', component: ShowPost }
         ]
     }
 ];
