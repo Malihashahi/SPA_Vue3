@@ -8,7 +8,7 @@ import ShowUser from './pages/users/ShowUser.vue';
 import TemplatePost from './pages/posts/PostTemplate.vue';
 import IndexPost from './pages/posts/PostIndex.vue';
 import ShowPost from './pages/posts/ShowPost.vue';
-
+import CreatePost from './pages/posts/CreatePost.vue';
 const routes = [
     { path: '/', name: 'home', component: Home },
     {

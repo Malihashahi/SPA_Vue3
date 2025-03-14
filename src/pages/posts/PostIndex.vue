@@ -1,19 +1,26 @@
 <template>
+  
   <div v-if="loading" class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
+ 
 
   <div v-else class="col-md-4" v-for="post in posts" :key="post.id">
     <div class="card">
       <div class="card-header">
-        <!-- <router-link :to="{ name: 'postId', params: { id: post.id } }"> -->
+        <router-link :to="{ name: 'postId', params: { id: post.id } }"> -->
           {{ post.title }}
-        <!-- </router-link> -->
+         </router-link>
+
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Body : {{ post.body }}</li>
+       
       </ul>
     </div>
+    <div> 
+  <router-link class="btn btn-dark" :to="CreatePost">create Posts</router-link>
+ </div>
   </div>
 </template>
 
