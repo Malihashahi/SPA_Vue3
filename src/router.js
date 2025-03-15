@@ -6,9 +6,10 @@ import IndexUser from './pages/users/user_index.vue';
 import ShowUser from './pages/users/ShowUser.vue';
 
 import TemplatePost from './pages/posts/PostTemplate.vue';
-import IndexPost from './pages/posts/PostIndex.vue';
+import IndexPost from './pages/posts/Post_Index.vue';
 import ShowPost from './pages/posts/ShowPost.vue';
-import CreatePost from './pages/posts/CreatePost.vue';
+import CreatePost from './pages/posts/Create_Post.vue';
+
 const routes = [
     { path: '/', name: 'home', component: Home },
     {
@@ -20,7 +21,8 @@ const routes = [
     {
         path: '/posts', name: 'postTemplate', component: TemplatePost, children: [
             { path: '', name: 'posts', component: IndexPost },
-            { path: ':id', name: 'postId', component: ShowPost }
+            { path: ':id', name: 'postId', component: ShowPost },
+            { path: 'create', name: 'createPost', component: CreatePost }
         ]
     }
 ];
