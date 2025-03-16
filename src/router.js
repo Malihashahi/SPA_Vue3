@@ -22,7 +22,7 @@ const routes = [
         path: '/posts', name: 'postTemplate', component: TemplatePost, children: [
             { path: '', name: 'posts', component: IndexPost },
             { path: ':id', name: 'postId', component: ShowPost },
-            { path: 'create', name: 'createPost', component: CreatePost }
+            { path: 'create', name: 'CreatePost', component: CreatePost }
         ]
     }
 ];
