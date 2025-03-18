@@ -10,7 +10,7 @@
 import PostForm from "@/components/posts/Form_Post.vue";
 import { ref } from "vue";
 import axios from "axios";
-import Swal from "sweetalert";
+import swal from "sweetalert";
 
 export default {
   components: {
@@ -30,7 +30,7 @@ export default {
         .then(function () {
           loading.value = false;
 
-          Swal.fire({
+          swal.fire({
             title: "Thanks!",
             text: "Post created successfully",
             icon: "success",

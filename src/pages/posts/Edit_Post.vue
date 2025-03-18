@@ -19,7 +19,7 @@
 import PostForm from "@/components/posts/Form_Post.vue";
 import { ref } from "vue";
 import axios from "axios";
-import Swal from "sweetalert";
+import swal from "sweetalert";
 import { useRoute } from "vue-router";
 
 export default {
@@ -58,7 +58,7 @@ export default {
         .then(function () {
           loading.value = false;
 
-          Swal.fire({
+          swal.fire({
             title: "Thanks!",
             text: "Post update successfully",
             icon: "success",
