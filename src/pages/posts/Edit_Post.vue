@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import PostForm from "@/components/posts/Form.vue";
+import PostForm from "@/components/posts/Form_Post.vue";
 import { ref } from "vue";
 import axios from "axios";
-import Swal from "sweetalert2";
+import Swal from "sweetalert";
 import { useRoute } from "vue-router";
 
 export default {

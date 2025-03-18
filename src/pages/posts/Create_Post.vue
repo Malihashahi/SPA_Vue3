@@ -2,15 +2,15 @@
   <div class="col-md-6">
     <h2 class="mb-5">Create Post :</h2>
 
-    <PostForm @formData="createPost" :button-loading="loading" button-text="Create Post" />
+    <PostForm @formData="CreatePost" :button-loading="loading" button-text="Create Post" />
   </div>
 </template>
 
 <script>
-import PostForm from "@/components/posts/Form.vue";
+import PostForm from "@/components/posts/Form_Post.vue";
 import { ref } from "vue";
 import axios from "axios";
-import Swal from "sweetalert2";
+import Swal from "sweetalert";
 
 export default {
   components: {
