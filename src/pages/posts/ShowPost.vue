@@ -29,7 +29,7 @@
 import axios from "axios";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 
 export default {
   setup() {
@@ -55,7 +55,7 @@ export default {
       axios
         .delete(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`)
         .then(function () {
-          swal.fire({
+          Swal.fire({
             title: "Thanks!",
             text: `Post (${route.params.id}) deleted successfully`,
             icon: "warning",
