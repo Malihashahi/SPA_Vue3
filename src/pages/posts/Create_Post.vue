@@ -34,7 +34,7 @@ export default {
             title: "Thanks!",
             text: "Post created successfully",
             icon: "success",
-            confirmButtonText: "Ok",
+            confirmButtonText: "Done",
           });
         })
         .catch(function (error) {
