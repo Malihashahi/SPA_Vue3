@@ -2,7 +2,7 @@
   <div>
     <Header />
     <router-view></router-view>
-    <h2>{{ count }} - {{ title }}</h2>
+    <h2>{{ count }} </h2>
  
   </div>
 </template>
